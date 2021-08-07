@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello FROM HTML</h1>
+
+    <ul id="main_menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Information</li>
+        <li class="darkColor" id="currentPage">Item</li>
+        <li>Home</li>
+        <li>About</li>
+        <li class="darkColor">Contact</li>
+        <li>Information</li>
+        <li class="darkColor" id="currentPage">Item</li>
+    </ul>
+
+
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li class="darkColor">Contact</li>
+        <li>Information</li>
+        <li class="darkColor" id="currentPage">Item</li>
+    </ul>
+
+
+    <ul class="list">
+        <li>Home</li>
+        <li>About</li>
+        <li class="darkColor">Contact</li>
+        <li>Information</li>
+        <li class="darkColor">Item
+            <ul class="list"> <!-- the closest ul had the class list for the level3Item id -->
+                <li>Home</li>
+                <li>About</li>
+                <li class="darkColor">Contact</li>
+                <li>Information</li>
+                <li class="darkColor">Item
+                    <ul class="submenu">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li class="darkColor">Contact</li>
+                        <li>Information</li>
+                        <li class="darkColor" id="level3Item">
+                        
+                            Item
+                        
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
