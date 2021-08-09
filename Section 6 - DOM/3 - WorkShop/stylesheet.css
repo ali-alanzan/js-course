@@ -1,0 +1,16 @@
+ul#student_grades {
+    margin: 80px 40px;
+}
+
+ul#student_grades li {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+li.science {
+    color: green;
+}
+
+li.academic {
+    color: indigo;
+}

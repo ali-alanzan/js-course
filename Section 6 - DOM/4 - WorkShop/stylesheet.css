@@ -1,0 +1,58 @@
+ul#students_list {
+    list-style-type: none;
+}
+
+ul#students_list li {
+    float: left;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #777;
+}
+
+
+ul#students_list li.active {
+    background-color: red;
+    color: #eee;
+    font-weight: bold;
+}
+
+
+#student_report {
+    list-style-type: none;
+    width: 100%;
+    float: left;
+}
+
+
+
+#student_report > li {
+    display: none;
+}
+
+#student_report > li.active {
+    display: block;
+}
+
+#student_report ul.student_grades {
+    margin: 80px 40px;
+}
+
+#student_report li.active ul.student_grades {
+    display: block;
+}
+
+#student_report ul.student_grades li {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+li.science {
+    color: green;
+}
+
+li.academic {
+    color: indigo;
+}
