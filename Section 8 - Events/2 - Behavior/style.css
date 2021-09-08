@@ -1,0 +1,58 @@
+*, html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h4 {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin: 30px auto;
+}
+ul {
+    list-style-type: none;
+    width: 300px;
+    display: table;
+    margin: 0 auto;
+}
+
+ul li {
+    width: 100%;
+    display: table;
+    margin: 10px auto;
+}
+
+ul li input {
+    padding: 5px 15px;
+    width: 85%;
+    float: left;
+}
+
+ul p.error {
+    color: red;
+    font-size: 12px;
+    width: 100%;
+    display: table;
+}
+
+ul li .remove {
+    background-color: red;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+    width: 25px;
+    float: right;
+}
+
+
+
+#add-skill {
+    background-color: blue;
+    margin: 20px auto;
+    border: none;
+    color: #fff;
+    display: table;
+    padding: 5px 10px;
+    cursor: pointer;
+}
