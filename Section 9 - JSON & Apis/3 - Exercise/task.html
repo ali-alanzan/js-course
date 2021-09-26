@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container" id="members_view">
+        <h1>Numbers List </h1>
+        <form action="http://localhost:3000/requests">
+             <div class="form-group">
+                 <label for="page">Page</label>
+                 <select name="page" id="page">
+                     <option value=""> -- chose page</option>
+                     <option value="1" selected> 1 </option>
+                 </select>
+             </div>
+ 
+             <div class="form-group">
+                 <label for="limit">Limit</label>
+                 <input type="number" min="1" name="limit" id="limit" value="3" placeholder="Limit">
+             </div>
+             <div class="w-100">
+                 <button class="btn-style"> Apply </button>
+             </div>
+        </form>
+ 
+        <!-- Members List -->
+        <ul class="w-100" id="members">
+             <li> <a href="/requests?phone=123">123</a></li>
+             <li> <a href="/requests?phone=123">123</a></li>
+             <li> <a href="/requests?phone=123">123</a></li>
+         </ul>
+         
+     </div>
+
+     
+
+
+    <div class="container" id="members_single">
+        
+        <button class="btn-style btn-green" id="backToNumbers">Back To Numbers List</button>
+        <div>
+            <h4> Member Name </h4>
+
+            <!-- the src attribute will be the member avatar  -->
+            <img src="https://via.placeholder.com/90">            
+            
+            <p>
+                <!-- replace the text with the member description -->
+                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia
+            </p>
+
+            <h4> Services </h4>
+            <ol>
+                <li>Test Service 1 </li>
+                <li>Test Service 1 </li>
+                <li>Test Service 1 </li>
+            </ol>
+            
+        </div>
+
+    </div>
+    
+
+
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+
+// 
+// Apply the following concept every time the select tag name="page" changed
+// Apply the following concept every time the select tag name="limit" changed
+// Apply the following concept when the page get louded for once as a default to show the first valid values
+ 
+
+/**
+ * @TODO 
+ ### Handle the filter form by javascript
+
+- use _form.serialize() to get the query form and put it as the query parameter
+- Call the Apis with the query parameters in the URL
+
+if it succeeds it will return an object with data (page, limit, total, numbers ):
+
+* calc the available pages based on the total and limit from the Apis
+
+* update the ul#pagination content based on the calculated result
+
+* update the li#prev & li#next content & links
+
+* update the pagination content as a whole based on the calculated pages
+
+* change the ul#members List items to valid links for numbers that come through the Apis
+
+* Change the form input#limit and select#page to the values that come through the Apis
+
+### Handle the numbers clicks by javascript
+
+- *  Call Apis especially for that phone he clicked on it
+- *  change the Elements content that inside the div#members_single
+    - a valid content from the Apis
+- * change the div#members_single style display to block
+- * change the div#members_view  style display to none
+
+### When the user clicks on the button#backToNumbers Elements
+
+* change the div#members_single style display to none
+
+* change the div#members_view  style display to block
+ */
+
+
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('GET', 'http://localhost:3000/requests?limit=10', true);
+
+        xhr.setRequestHeader('Content-type', 'text/plain');
+
+        xhr.send();
+
+        // Code to do when the state changes.
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                var jsonReponse = JSON.parse(xhr.responseText);
+                
+                console.log(jsonReponse);
+                // var pagination_nums = Number(jsonReponse.total) / Number(jsonReponse.limit);
+                // pagination_nums = Math.ceil(pagination_nums);
+                // console.log(pagination_nums);
+             
+            }
+        }
+
+    </script>
+</body>
+</html>
