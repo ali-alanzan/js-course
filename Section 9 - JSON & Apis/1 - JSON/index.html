@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <!-- <div>
+            <h4>Title Here Title Here  Title Here  Title Here </h4>
+
+            <img src="https://via.placeholder.com/400x100">
+            <small>Views: 434</small>
+            <p>
+                In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia
+            </p>
+            
+        </div> -->
+
+    </div>
+
+    <p id="wait">Please wait...</p>
+
+    <script src="script.js"></script>
+
+    <script>
+
+        var _wait = document.getElementById('wait');
+
+        var posts = [];
+
+        var xhr = new XMLHttpRequest();
+
+
+        // Set The Method to POST
+        // And The URL to the endpoint file 
+        // AND The Async function to true ( wait the connection )
+        xhr.open('GET', 'posts.json', true);
+
+        xhr.setRequestHeader('Content-type', 'application/json');
+
+        xhr.send();
+
+        // Code to do when the state changes.
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                var jsonReponse = JSON.parse(xhr.responseText);
+                
+                var start = 0, end = 3;
+                posts = jsonReponse;
+                addPosts(posts, start, end);
+                posts = posts.slice(end);
+            }
+        }
+
+
+        window.addEventListener('scroll', function () {
+            var lastPostOffset = container.lastElementChild.offsetTop - container.lastElementChild.clientHeight;
+            
+            if( window.scrollY > lastPostOffset && posts.length > 0 && _wait.style.top != '0px' ) {
+                _wait.style.top = '0';
+
+                setTimeout(function () {
+                    var start = 0, end = 3;
+                    addPosts(posts, start, end);
+                    posts = posts.slice(end);
+                    _wait.style.top = '-100vh';
+                }, 2000, posts, _wait);
+
+
+            }
+
+
+        });
+
+    </script>
+</body>
+</html>

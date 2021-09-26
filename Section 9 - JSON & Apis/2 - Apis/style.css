@@ -1,0 +1,97 @@
+*, html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+
+#container {
+    width: 70%;
+    margin: 0 auto
+}
+
+.w-100 {
+    width: 100%;
+    float: left;
+}
+
+h4 {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin: 0px auto;
+}
+
+
+.form-group {
+    width: 49%;
+    float: left;
+    display: block;
+    padding-right: 10px;
+    margin: 10px auto;
+}
+
+.form-group label {
+    width: 100%;
+    float: left;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+
+ul {
+    width: 90%;
+    float: right;
+}
+
+ul li {
+    width: 100%;
+    display: table;
+    margin: 10px auto;
+}
+
+.form-group ul li  input {
+    padding: 5px 15px;
+    width: 85%;
+    float: left;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    width: 100%;
+    display: table;
+}
+
+ul li .remove {
+    background-color: red;
+    padding: 5px 10px;
+    color: #fff;
+    cursor: pointer;
+    width: 25px;
+    float: right;
+}
+
+
+
+.btn-style {
+    background-color: blue;
+    margin: 20px auto;
+    border: none;
+    color: #fff;
+    display: table;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn-green {
+    background-color: green;
+}

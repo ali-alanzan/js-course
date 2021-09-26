@@ -1,0 +1,24 @@
+[
+    {
+        "firstName": "Ali",
+        "lastName": "Alanzam"
+    },
+    {
+        "firstName": "Ali",
+        "lastName": "Alanzam",
+        "skills": [
+            "HTML5", 
+            "Javascript",
+            "SASS"
+        ],
+        "grades": {
+            "math": "90%",
+            "physics": "80%",
+            "testArray": [
+                "123",
+                "123"
+            ]
+        }
+
+    }
+]
